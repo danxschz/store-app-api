@@ -7,6 +7,7 @@ import logger from 'morgan';
 
 import indexRouter from './routes/index';
 import usersRouter from './routes/users';
+import collectionsRouter from './routes/collections';
 
 class App {
   public app: express.Application;
@@ -33,6 +34,7 @@ class App {
   private routerSetup() {
     this.app.use('/', indexRouter);
     this.app.use('/users', usersRouter);
+    this.app.use('/collections', collectionsRouter);
   }
 
   private errorHandler() {
