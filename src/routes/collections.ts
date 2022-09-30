@@ -4,13 +4,13 @@ import collections from '../models/collections';
 const router = express.Router();
 
 // GET collections
-router.get('/', function (_req, res, _next) {
+router.get('/', function (req, res, next) {
   res.send(collections);
 });
 
 // GET collection
-router.get('/:id', function (_req, res, _next) {
-  res.send(collections[_req.params.id as keyof object]);
+router.get('/:id', function (req, res, next) {
+  res.send(collections[req.params.id as keyof object]);
 });
 
 export default router;

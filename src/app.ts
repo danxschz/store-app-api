@@ -4,9 +4,9 @@ import express, { RequestHandler, ErrorRequestHandler  } from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
+import mongoose from 'mongoose';
 
 import indexRouter from './routes/index';
-import usersRouter from './routes/users';
 import collectionsRouter from './routes/collections';
 
 class App {
@@ -26,20 +26,19 @@ class App {
 
     this.app.use(logger('dev'));
     this.app.use(express.json());
-    this.app.use(express.urlencoded({ extended: false }));
+    this.app.use(express.urlencoded({ extended: true }));
     this.app.use(cookieParser());
     this.app.use(express.static(path.join(__dirname, 'public')));
   }
 
   private routerSetup() {
     this.app.use('/', indexRouter);
-    this.app.use('/users', usersRouter);
     this.app.use('/collections', collectionsRouter);
   }
 
   private errorHandler() {
     // catch 404 and forward to error handler
-    const requestHandler: RequestHandler = function (_req, _res, next) {
+    const requestHandler: RequestHandler = function (req, res, next) {
       next(createError(404));
     };
     this.app.use(requestHandler);
@@ -49,7 +48,7 @@ class App {
       err,
       req,
       res,
-      _next
+      next
     ) {
       // set locals, only providing error in development
       res.locals.message = err.message;
@@ -64,4 +63,3 @@ class App {
 }
 
 export default new App().app;
-
