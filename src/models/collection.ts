@@ -7,7 +7,6 @@ const CollectionSchema = new Schema({
   name: { type: String, required: true, maxLength: 50 },
   slug: { type: String, required: true, maxLength: 50 },
   img: { type: String, required: true, maxLength: 100 },
-  items: [{ type: Schema.Types.ObjectId, ref: 'Case' }],
 });
 
 const model = mongoose.model('Collection', CollectionSchema);
