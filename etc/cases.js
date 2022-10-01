@@ -1,80 +1,118 @@
-const cases = {
-  'sxf-01': {
+const cases = [
+  {
+    id: 'sxf-01',
     name: 'Anya Shock',
     price: 20,
+    img: 'tbd',
   },
-  'dsl-01': {
+  {
+    id: 'dsl-01',
     name: 'Demon Sister',
     price: 20,
+    img: 'tbd',
   },
-  'sgh-01': {
+  {
+    id: 'sgh-01',
     name: 'Dragon Spirit',
     price: 20,
+    img: 'tbd',
   },
-  'jba-01': {
+  {
+    id: 'jba-01',
     name: 'Giorno Pattern',
     price: 20,
+    img: 'tbd',
   },
-  'jjk-01': {
+  {
+    id: 'jjk-01',
     name: 'Gojo',
     price: 20,
+    img: 'tbd',
   },
-  'jba-02': {
+  {
+    id: 'jba-02',
     name: 'Jotaro Kujo',
     price: 20,
+    img: 'tbd',
   },
-  'jjk-02': {
+  {
+    id: 'jjk-02',
     name: 'Jujutsu High Students',
     price: 20,
+    img: 'tbd',
   },
-  'nar-01': {
+  {
+    id: 'nar-01',
     name: 'Young Naruto',
     price: 20,
+    img: 'tbd',
   },
-  'sel-01': {
+  {
+    id: 'sel-01',
     name: 'Lost in The Wired',
     price: 20,
+    img: 'tbd',
   },
-  'opi-01': {
+  {
+    id: 'opi-01',
     name: 'Thousand Sunny',
     price: 20,
+    img: 'tbd',
   },
-  'dsl-02': {
+  {
+    id: 'dsl-02',
     name: 'Nezuko Pattern',
     price: 20,
+    img: 'tbd',
   },
-  'sgh-02': {
+  {
+    id: 'sgh-02',
     name: 'No Face',
     price: 20,
+    img: 'tbd',
   },
-  'nar-02': {
+  {
+    id: 'nar-02',
     name: 'Visual Jutsu',
     price: 20,
+    img: 'tbd',
   },
-  'sel-02': {
+  {
+    id: 'sel-02',
     name: 'Retro Wired',
     price: 20,
+    img: 'tbd',
   },
-  'aot-01': {
+  {
+    id: 'aot-01',
     name: 'Fly High',
     price: 20,
+    img: 'tbd',
   },
-  'nar-03': {
+  {
+    id: 'nar-03',
     name: 'White Clouds',
     price: 20,
+    img: 'tbd',
   },
-  'aot-02': {
+  {
+    id: 'aot-02',
     name: 'Wings of Freedom',
     price: 20,
+    img: 'tbd',
   },
-  'sel-03': {
+  {
+    id: 'sel-03',
     name: 'Wired Girl',
     price: 20,
+    img: 'tbd',
   },
-  'dsl-03': {
+  {
+    id: 'dsl-03',
     name: 'Yellow Boy',
     price: 20,
+    img: 'tbd',
   },
-}
+]
 
 export default cases;
