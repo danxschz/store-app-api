@@ -6,6 +6,7 @@ import logger from 'morgan';
 import mongoose from 'mongoose';
 
 import indexRouter from './routes/index';
+import casesRouter from './routes/cases';
 import collectionsRouter from './routes/collections';
 
 const app = express();
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes setup
 app.use('/', indexRouter);
+app.use('/cases', casesRouter);
 app.use('/collections', collectionsRouter);
 
 // Catch 404 and forward to error handler

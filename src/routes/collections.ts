@@ -1,5 +1,5 @@
 import express from 'express';
-import collections from '../models/collections';
+import collections from '../models/a';
 
 const router = express.Router();
 
