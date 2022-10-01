@@ -1,5 +1,6 @@
-const collections = {
-  aot: { 
+const collections = [
+  {
+    id: 'aot', 
     name: 'Attack on Titan', 
     slug: 'attack-on-titan',
     items: [
@@ -7,7 +8,8 @@ const collections = {
       'aot-02',
     ]
   },
-  dsl: { 
+  { 
+    id: 'dsl',
     name: 'Demon Slayer', 
     slug: 'demon-slayer',
     items: [
@@ -16,7 +18,8 @@ const collections = {
       'dsl-03',
     ]
   },
-  jba: { 
+  { 
+    id: 'jba',
     name: "Jojo's Bizarre Adventures", 
     slug: 'jojos',
     items: [
@@ -24,7 +27,8 @@ const collections = {
       'jba-02',
     ]
   },
-  jjk: { 
+  { 
+    id: 'jjk',
     name: 'Jujutsu Kaisen', 
     slug: 'jujutsu-kaisen',
     items: [
@@ -32,7 +36,8 @@ const collections = {
       'jjk-02',
     ]
   },
-  nar: { 
+  {
+    id: 'nar', 
     name: 'Naruto', 
     slug: 'naruto',
     items: [
@@ -41,21 +46,24 @@ const collections = {
       'nar-03',
     ]
   },
-  opi: { 
+  {
+    id: 'opi', 
     name: 'One Piece', 
     slug: 'one-piece',
     items: [
       'opi-01',
     ]
   },
-  sxf: { 
+  { 
+    id: 'sxf',
     name: 'Spy x Family', 
     slug: 'spy-family',
     items: [
       'sxf-01',
     ]
   },
-  sgh: { 
+  { 
+    id: 'sgh',
     name: 'Studio Ghibli', 
     slug: 'studio-ghibli',
     items: [
@@ -63,7 +71,8 @@ const collections = {
       'sgh-02',
     ]
   },
-  sel: { 
+  { 
+    id: 'sel',
     name: 'Serial Experiments Lain', 
     slug: 'lain',
     items: [
@@ -72,6 +81,6 @@ const collections = {
       'sel-03',
     ]
   },
-}
+]
 
 export default collections;
