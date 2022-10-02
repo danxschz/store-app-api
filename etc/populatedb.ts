@@ -17,14 +17,18 @@ mongoose.Promise = global.Promise;
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-const collectionObj: any = {}
+interface CollectionObj {
+  [key: string]: {}
+}
+
+const collectionObj: CollectionObj = {}
 
 const collectionCreate = async (id: string, name: string, slug: string, img: string) => {
   const collectionDetail = { id, name, slug, img }
   const document = new Collection(collectionDetail);
   await document.save();
   console.log(`New collection: ${document}`);
-  collectionObj[id as keyof typeof collectionObj] = document;
+  collectionObj[id] = document;
 }
 
 const caseCreate = async (id: string, name: string, price: number, img: string, collection_obj: any) => {
