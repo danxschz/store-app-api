@@ -1,9 +1,13 @@
 {
   "name": "store-app-api",
   "version": "0.0.0",
+  "engines": {
+    "node": "16.15.0"
+  },
   "private": true,
   "scripts": {
-    "start": "export NODE_OPTIONS='--trace-deprecation --abort-on-uncaught-exception' && export NODE_ENV=development && nodemon --exec ts-node ./bin/www.ts",
+    "devstart": "export NODE_OPTIONS='--trace-deprecation --abort-on-uncaught-exception' && export NODE_ENV=development && nodemon --exec ts-node ./bin/www.ts",
+    "start": "export NODE_OPTIONS='--trace-deprecation --abort-on-uncaught-exception' && export NODE_ENV=production && ts-node ./bin/www.ts",
     "build": "sh etc/build.sh"
   },
   "dependencies": {
