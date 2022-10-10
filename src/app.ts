@@ -4,6 +4,7 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import mongoose from 'mongoose';
+import cors from 'cors';
 
 import indexRouter from './routes/index';
 import casesRouter from './routes/cases';
@@ -18,6 +19,7 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, "MongoDB connection error:"));
 
 // Middleware setup
+app.use(cors())
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
