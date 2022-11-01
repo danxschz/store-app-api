@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import { ErrorWithStatus } from '@/types/global';
 import Collection from '../models/collection';
 import Case from '../models/case';
+import Accessory from '../models/accessory';
 
 // GET collections
 const collection_list = (req: Request, res: Response, next: NextFunction) => {
@@ -22,6 +23,7 @@ interface CollectionDetail {
   slug: string,
   img: string,
   cases: {}[],
+  accessories: {}[],
 }
 
 // GET collection
@@ -37,11 +39,13 @@ const collection_detail = async (req: Request, res: Response, next: NextFunction
     }
 
     const cases = await Case.find({ collection_obj: collection._id }, '-_id -__v -collection_obj').exec();
+    const accessories = await Accessory.find({ collection_obj: collection._id }, '-_id -__v -collection_obj').exec();
   
     // Convert to object to add property
     const resultObj: CollectionDetail = collection.toObject();
-    resultObj.cases = cases
-  
+    resultObj.cases = cases;
+    resultObj.accessories = accessories;
+
     // Remove _id property from object
     const { _id, ...result } = resultObj;
 
