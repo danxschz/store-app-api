@@ -53,6 +53,12 @@ const collections = [
     slug: 'lain',
     img: 'https://cdn.jsdelivr.net/gh/danxschz/store-app/src/assets/collections/sel.jpg',
   },
+  {
+    id: 'trl', 
+    name: 'The Rage Lab', 
+    slug: 'the-rage-lab',
+    img: 'https://cdn.jsdelivr.net/gh/danxschz/store-app/src/assets/collections/trl.jpg',
+  },
 ]
 
 export default collections;

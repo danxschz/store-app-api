@@ -8,6 +8,7 @@ import cors from 'cors';
 
 import indexRouter from './routes/index';
 import casesRouter from './routes/cases';
+import accessoriesRouter from './routes/accessories';
 import collectionsRouter from './routes/collections';
 
 const app = express();
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes setup
 app.use('/', indexRouter);
 app.use('/cases', casesRouter);
+app.use('/accessories', accessoriesRouter);
 app.use('/collections', collectionsRouter);
 
 // Catch 404 and forward to error handler
